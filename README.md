@@ -11,11 +11,15 @@ pod 'PGNumberKeyboard'
 # Usage
 
 ```
+#import <PGNumberKeyboard/PGNumberKeyboardManager.h>
+
 [PGNumberKeyboardManager new].textField = yourTextField;
 ```
 # Advanced Usage
 
 ```
+#import <PGNumberKeyboard/PGNumberKeyboardManager.h>
+
 PGNumberKeyboardManager *manager = [[PGNumberKeyboardManager alloc]init];
 manager.delegate = self;
 manager.textField = yourTextField;
