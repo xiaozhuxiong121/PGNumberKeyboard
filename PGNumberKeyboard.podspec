@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGNumberKeyboard"
-  s.version      = "1.0"
+  s.version      = "1.0.1"
   s.summary      = "将dataSource分离出去，减小TableViewController的体积。"
   s.homepage     = "https://github.com/xiaozhuxiong121/PGBaseDataSource"
   s.license      = "MIT"
