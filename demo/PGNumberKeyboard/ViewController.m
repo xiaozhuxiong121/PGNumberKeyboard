@@ -7,7 +7,7 @@
 //
 
 #import "ViewController.h"
-#import "PGNumberKeyboard.h"
+#import <PGNumberKeyboard/PGNumberKeyboard.h>
 #import "UIColor+Random.h"
 
 @interface ViewController ()<PGNumberKeyboardDelegate>

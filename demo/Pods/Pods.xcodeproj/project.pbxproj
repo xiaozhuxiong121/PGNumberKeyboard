@@ -1,0 +1,492 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E1C044B49121C59A85F9B0EA0EA16F7 /* PGNumberKeyboard.h in Headers */ = {isa = PBXBuildFile; fileRef = C285489C2D5726D157177B245F1985ED /* PGNumberKeyboard.h */; settings = {ATTRIBUTES = (Public, ); }; };
+		6D1C0236227E79F84B21853BDB30BF89 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		A67EC20C810BDADE635BA2663564D1C9 /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */; };
+		A92E852184F3D0629DF882CA97071C82 /* PGNumberKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = E097B3B1A8F2E22CCF5F217F376DBCFA /* PGNumberKeyboard-dummy.m */; };
+		D4AA1AA21F5C61448249B9E39545F1C0 /* Pods-PGNumberKeyboard-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = FE4B2ABA3B3792AE6A1F212C0DF952C2 /* Pods-PGNumberKeyboard-dummy.m */; };
+		F26087663A5B3DDB5449AB8F5BDDBE78 /* PGNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 524E69ADD77D4CBFB517D332C8B7D559 /* PGNumberKeyboard.m */; };
+		FC28F7ECF61E642C31FF19A8AECF7F0C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		220E477655DD2C90C8A7590018999448 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 139A58956322D543A01EF8CAC51B9D3B;
+			remoteInfo = PGNumberKeyboard;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		069586FAB6027762AC22E06979C93E46 /* Pods-PGNumberKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGNumberKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
+		178E932469C99BDA274A43682B889D28 /* Pods-PGNumberKeyboard-acknowledgements.markdown */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; path = "Pods-PGNumberKeyboard-acknowledgements.markdown"; sourceTree = "<group>"; };
+		524E69ADD77D4CBFB517D332C8B7D559 /* PGNumberKeyboard.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; name = PGNumberKeyboard.m; path = PGNumberKeyboard/PGNumberKeyboard.m; sourceTree = "<group>"; };
+		5CF7B354CB8F6133946DEF4D7FF71473 /* Pods-PGNumberKeyboard-acknowledgements.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-PGNumberKeyboard-acknowledgements.plist"; sourceTree = "<group>"; };
+		84FF848D569FAFD1ED4914C36A97B81D /* Pods-PGNumberKeyboard-frameworks.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGNumberKeyboard-frameworks.sh"; sourceTree = "<group>"; };
+		87BAA945818838FB595D31A8CA2F8433 /* libPods-PGNumberKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = "libPods-PGNumberKeyboard.a"; path = "libPods-PGNumberKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */ = {isa = PBXFileReference; explicitFileType = text.script.ruby; includeInIndex = 1; lastKnownFileType = text; name = Podfile; path = ../Podfile; sourceTree = SOURCE_ROOT; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		A501027D7D8990F7F616E23303BF1E31 /* PGNumberKeyboard.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = PGNumberKeyboard.xcconfig; sourceTree = "<group>"; };
+		B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = UIKit.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/UIKit.framework; sourceTree = DEVELOPER_DIR; };
+		BEED540523EB5F3D350AC6145B35E35C /* PGNumberKeyboard-prefix.pch */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "PGNumberKeyboard-prefix.pch"; sourceTree = "<group>"; };
+		C285489C2D5726D157177B245F1985ED /* PGNumberKeyboard.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; name = PGNumberKeyboard.h; path = PGNumberKeyboard/PGNumberKeyboard.h; sourceTree = "<group>"; };
+		CBD7F89F1E869174AB1C686F79C1F54D /* keyboardDelete.png */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = image.png; name = keyboardDelete.png; path = PGNumberKeyboard/keyboardDelete.png; sourceTree = "<group>"; };
+		D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Foundation.framework; path = Platforms/iPhoneOS.platform/Developer/SDKs/iPhoneOS10.3.sdk/System/Library/Frameworks/Foundation.framework; sourceTree = DEVELOPER_DIR; };
+		E097B3B1A8F2E22CCF5F217F376DBCFA /* PGNumberKeyboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "PGNumberKeyboard-dummy.m"; sourceTree = "<group>"; };
+		E7FC17592266B4F672711000B4FB2581 /* Pods-PGNumberKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-PGNumberKeyboard.release.xcconfig"; sourceTree = "<group>"; };
+		ED6A61D4F2611AC03A6785B9D9CBDA63 /* Pods-PGNumberKeyboard-resources.sh */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.script.sh; path = "Pods-PGNumberKeyboard-resources.sh"; sourceTree = "<group>"; };
+		F1EDA7C80A19DB86164C9CBEBEDCDB99 /* libPGNumberKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; name = libPGNumberKeyboard.a; path = libPGNumberKeyboard.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		FE4B2ABA3B3792AE6A1F212C0DF952C2 /* Pods-PGNumberKeyboard-dummy.m */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.objc; path = "Pods-PGNumberKeyboard-dummy.m"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		C2C297E0BE6E67EA5677C4BA095F1B1A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				6D1C0236227E79F84B21853BDB30BF89 /* Foundation.framework in Frameworks */,
+				FC28F7ECF61E642C31FF19A8AECF7F0C /* UIKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		ED399D89BC7C807552965D7D83638A77 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A67EC20C810BDADE635BA2663564D1C9 /* Foundation.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		1DA298EA91F5BEB4D520815345FD6ABB /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F1EDA7C80A19DB86164C9CBEBEDCDB99 /* libPGNumberKeyboard.a */,
+				87BAA945818838FB595D31A8CA2F8433 /* libPods-PGNumberKeyboard.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		36CA8F3BC14A2ED7DD20BB689CBCC23B /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				E9114E789C4E124280F50D5EF0B4218D /* PGNumberKeyboard */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		433CD3331B6C3787F473C941B61FC68F /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				438B396F6B4147076630CAEFE34282C1 /* iOS */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		438B396F6B4147076630CAEFE34282C1 /* iOS */ = {
+			isa = PBXGroup;
+			children = (
+				D88AAE1F92055A60CC2FC970D7D34634 /* Foundation.framework */,
+				B63C6A64CF66340668996F78DA6BB482 /* UIKit.framework */,
+			);
+			name = iOS;
+			sourceTree = "<group>";
+		};
+		6A245E8C95E36DF26431468BEA0E3A0D /* Targets Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				E35AE53AE6875A8B3A47EAE1CE8F8F65 /* Pods-PGNumberKeyboard */,
+			);
+			name = "Targets Support Files";
+			sourceTree = "<group>";
+		};
+		7DB346D0F39D3F0E887471402A8071AB = {
+			isa = PBXGroup;
+			children = (
+				93A4A3777CF96A4AAC1D13BA6DCCEA73 /* Podfile */,
+				433CD3331B6C3787F473C941B61FC68F /* Frameworks */,
+				36CA8F3BC14A2ED7DD20BB689CBCC23B /* Pods */,
+				1DA298EA91F5BEB4D520815345FD6ABB /* Products */,
+				6A245E8C95E36DF26431468BEA0E3A0D /* Targets Support Files */,
+			);
+			sourceTree = "<group>";
+		};
+		C07F40D1663C03C47486EFA30305F84F /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				CBD7F89F1E869174AB1C686F79C1F54D /* keyboardDelete.png */,
+			);
+			name = Resources;
+			sourceTree = "<group>";
+		};
+		C57916FB5BA6EBB555302DF646F76B1D /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				A501027D7D8990F7F616E23303BF1E31 /* PGNumberKeyboard.xcconfig */,
+				E097B3B1A8F2E22CCF5F217F376DBCFA /* PGNumberKeyboard-dummy.m */,
+				BEED540523EB5F3D350AC6145B35E35C /* PGNumberKeyboard-prefix.pch */,
+			);
+			name = "Support Files";
+			path = "../Target Support Files/PGNumberKeyboard";
+			sourceTree = "<group>";
+		};
+		E35AE53AE6875A8B3A47EAE1CE8F8F65 /* Pods-PGNumberKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				178E932469C99BDA274A43682B889D28 /* Pods-PGNumberKeyboard-acknowledgements.markdown */,
+				5CF7B354CB8F6133946DEF4D7FF71473 /* Pods-PGNumberKeyboard-acknowledgements.plist */,
+				FE4B2ABA3B3792AE6A1F212C0DF952C2 /* Pods-PGNumberKeyboard-dummy.m */,
+				84FF848D569FAFD1ED4914C36A97B81D /* Pods-PGNumberKeyboard-frameworks.sh */,
+				ED6A61D4F2611AC03A6785B9D9CBDA63 /* Pods-PGNumberKeyboard-resources.sh */,
+				069586FAB6027762AC22E06979C93E46 /* Pods-PGNumberKeyboard.debug.xcconfig */,
+				E7FC17592266B4F672711000B4FB2581 /* Pods-PGNumberKeyboard.release.xcconfig */,
+			);
+			name = "Pods-PGNumberKeyboard";
+			path = "Target Support Files/Pods-PGNumberKeyboard";
+			sourceTree = "<group>";
+		};
+		E9114E789C4E124280F50D5EF0B4218D /* PGNumberKeyboard */ = {
+			isa = PBXGroup;
+			children = (
+				C285489C2D5726D157177B245F1985ED /* PGNumberKeyboard.h */,
+				524E69ADD77D4CBFB517D332C8B7D559 /* PGNumberKeyboard.m */,
+				C07F40D1663C03C47486EFA30305F84F /* Resources */,
+				C57916FB5BA6EBB555302DF646F76B1D /* Support Files */,
+			);
+			name = PGNumberKeyboard;
+			path = PGNumberKeyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXHeadersBuildPhase section */
+		011D8F0201E2A0B1368E06120C8E79AB /* Headers */ = {
+			isa = PBXHeadersBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1C044B49121C59A85F9B0EA0EA16F7 /* PGNumberKeyboard.h in Headers */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXHeadersBuildPhase section */
+
+/* Begin PBXNativeTarget section */
+		0AED44DC87D58FCA7130493F0211ED9B /* Pods-PGNumberKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 0B0D2F41CD3F7ADF398572E00375762B /* Build configuration list for PBXNativeTarget "Pods-PGNumberKeyboard" */;
+			buildPhases = (
+				3C950B73A92B201B0F5A35B143BC79EF /* Sources */,
+				ED399D89BC7C807552965D7D83638A77 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				BD916A9AEA1F952420BB600A592A0C48 /* PBXTargetDependency */,
+			);
+			name = "Pods-PGNumberKeyboard";
+			productName = "Pods-PGNumberKeyboard";
+			productReference = 87BAA945818838FB595D31A8CA2F8433 /* libPods-PGNumberKeyboard.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+		139A58956322D543A01EF8CAC51B9D3B /* PGNumberKeyboard */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = E7C1BCB9F1810ABBBD97CAE7154D93F1 /* Build configuration list for PBXNativeTarget "PGNumberKeyboard" */;
+			buildPhases = (
+				BD5C40C184328FE768D1926D285A360B /* Sources */,
+				C2C297E0BE6E67EA5677C4BA095F1B1A /* Frameworks */,
+				011D8F0201E2A0B1368E06120C8E79AB /* Headers */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PGNumberKeyboard;
+			productName = PGNumberKeyboard;
+			productReference = F1EDA7C80A19DB86164C9CBEBEDCDB99 /* libPGNumberKeyboard.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		D41D8CD98F00B204E9800998ECF8427E /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0830;
+				LastUpgradeCheck = 0700;
+			};
+			buildConfigurationList = 2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 7DB346D0F39D3F0E887471402A8071AB;
+			productRefGroup = 1DA298EA91F5BEB4D520815345FD6ABB /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				139A58956322D543A01EF8CAC51B9D3B /* PGNumberKeyboard */,
+				0AED44DC87D58FCA7130493F0211ED9B /* Pods-PGNumberKeyboard */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3C950B73A92B201B0F5A35B143BC79EF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				D4AA1AA21F5C61448249B9E39545F1C0 /* Pods-PGNumberKeyboard-dummy.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		BD5C40C184328FE768D1926D285A360B /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				A92E852184F3D0629DF882CA97071C82 /* PGNumberKeyboard-dummy.m in Sources */,
+				F26087663A5B3DDB5449AB8F5BDDBE78 /* PGNumberKeyboard.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		BD916A9AEA1F952420BB600A592A0C48 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			name = PGNumberKeyboard;
+			target = 139A58956322D543A01EF8CAC51B9D3B /* PGNumberKeyboard */;
+			targetProxy = 220E477655DD2C90C8A7590018999448 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		1AD565F72FE29D5AB5BF0193D647FFB4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A501027D7D8990F7F616E23303BF1E31 /* PGNumberKeyboard.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PGNumberKeyboard/PGNumberKeyboard-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		3890D7C92DE120C2BA762135796CFA80 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = YES;
+				ENABLE_NS_ASSERTIONS = NO;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_RELEASE=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		3E861178E17755AFB9FB497823ECC6C4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = E7FC17592266B4F672711000B4FB2581 /* Pods-PGNumberKeyboard.release.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+		587B8ECC28E3A9FF4796C121925DC113 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGNING_REQUIRED = NO;
+				COPY_PHASE_STRIP = NO;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"POD_CONFIGURATION_DEBUG=1",
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				ONLY_ACTIVE_ARCH = YES;
+				PROVISIONING_PROFILE_SPECIFIER = NO_SIGNING/;
+				STRIP_INSTALLED_PRODUCT = NO;
+				SYMROOT = "${SRCROOT}/../build";
+			};
+			name = Debug;
+		};
+		D179D27E91D63EF2DA8060129782387F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 069586FAB6027762AC22E06979C93E46 /* Pods-PGNumberKeyboard.debug.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MACH_O_TYPE = staticlib;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PODS_ROOT = "$(SRCROOT)";
+				PRODUCT_BUNDLE_IDENTIFIER = "org.cocoapods.${PRODUCT_NAME:rfc1034identifier}";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		D5ECF3905945B3445EE6DA6ACA4B01B8 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = A501027D7D8990F7F616E23303BF1E31 /* PGNumberKeyboard.xcconfig */;
+			buildSettings = {
+				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
+				"CODE_SIGN_IDENTITY[sdk=watchos*]" = "";
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_PREFIX_HEADER = "Target Support Files/PGNumberKeyboard/PGNumberKeyboard-prefix.pch";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				OTHER_LDFLAGS = "";
+				OTHER_LIBTOOLFLAGS = "";
+				PRIVATE_HEADERS_FOLDER_PATH = "";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				PUBLIC_HEADERS_FOLDER_PATH = "";
+				SDKROOT = iphoneos;
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		0B0D2F41CD3F7ADF398572E00375762B /* Build configuration list for PBXNativeTarget "Pods-PGNumberKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D179D27E91D63EF2DA8060129782387F /* Debug */,
+				3E861178E17755AFB9FB497823ECC6C4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		2D8E8EC45A3A1A1D94AE762CB5028504 /* Build configuration list for PBXProject "Pods" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				587B8ECC28E3A9FF4796C121925DC113 /* Debug */,
+				3890D7C92DE120C2BA762135796CFA80 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		E7C1BCB9F1810ABBBD97CAE7154D93F1 /* Build configuration list for PBXNativeTarget "PGNumberKeyboard" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				D5ECF3905945B3445EE6DA6ACA4B01B8 /* Debug */,
+				1AD565F72FE29D5AB5BF0193D647FFB4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = D41D8CD98F00B204E9800998ECF8427E /* Project object */;
+}

@@ -7,18 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2B734197B4B13A53B5111C9F /* libPods-PGNumberKeyboard.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 86FAA5EEF930950B9ED3D6FB /* libPods-PGNumberKeyboard.a */; };
 		86B80BB01F06429200D819F3 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BAF1F06429200D819F3 /* main.m */; };
 		86B80BB31F06429200D819F3 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BB21F06429200D819F3 /* AppDelegate.m */; };
 		86B80BB61F06429200D819F3 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BB51F06429200D819F3 /* ViewController.m */; };
 		86B80BB91F06429200D819F3 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BB71F06429200D819F3 /* Main.storyboard */; };
 		86B80BBB1F06429200D819F3 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BBA1F06429200D819F3 /* Assets.xcassets */; };
 		86B80BBE1F06429200D819F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BBC1F06429200D819F3 /* LaunchScreen.storyboard */; };
-		86B80BF01F06430200D819F3 /* keyboardDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BEB1F06430200D819F3 /* keyboardDelete.png */; };
-		86B80BF11F06430200D819F3 /* PGNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */; };
 		86B80BF51F06434200D819F3 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BF41F06434200D819F3 /* UIColor+Random.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		398795BA12A21D50D5049851 /* Pods-PGNumberKeyboard.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGNumberKeyboard.debug.xcconfig"; path = "Pods/Target Support Files/Pods-PGNumberKeyboard/Pods-PGNumberKeyboard.debug.xcconfig"; sourceTree = "<group>"; };
 		86B80BAB1F06429200D819F3 /* PGNumberKeyboard.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PGNumberKeyboard.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		86B80BAF1F06429200D819F3 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		86B80BB11F06429200D819F3 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -29,11 +29,10 @@
 		86B80BBA1F06429200D819F3 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		86B80BBD1F06429200D819F3 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		86B80BBF1F06429200D819F3 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		86B80BEB1F06430200D819F3 /* keyboardDelete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboardDelete.png; sourceTree = "<group>"; };
-		86B80BEC1F06430200D819F3 /* PGNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGNumberKeyboard.h; sourceTree = "<group>"; };
-		86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGNumberKeyboard.m; sourceTree = "<group>"; };
 		86B80BF31F06434200D819F3 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
 		86B80BF41F06434200D819F3 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
+		86FAA5EEF930950B9ED3D6FB /* libPods-PGNumberKeyboard.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PGNumberKeyboard.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EC96BD18EAAA7A91AA31C6F7 /* Pods-PGNumberKeyboard.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PGNumberKeyboard.release.xcconfig"; path = "Pods/Target Support Files/Pods-PGNumberKeyboard/Pods-PGNumberKeyboard.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -41,6 +40,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2B734197B4B13A53B5111C9F /* libPods-PGNumberKeyboard.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -52,6 +52,8 @@
 			children = (
 				86B80BAD1F06429200D819F3 /* PGNumberKeyboard */,
 				86B80BAC1F06429200D819F3 /* Products */,
+				E7AAA1AAA4707EEDF5F8D422 /* Pods */,
+				B190FE0C982300D003A69C75 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -66,7 +68,6 @@
 		86B80BAD1F06429200D819F3 /* PGNumberKeyboard */ = {
 			isa = PBXGroup;
 			children = (
-				86B80BEA1F06430200D819F3 /* PGNumberKeyboard */,
 				86B80BB11F06429200D819F3 /* AppDelegate.h */,
 				86B80BB21F06429200D819F3 /* AppDelegate.m */,
 				86B80BB41F06429200D819F3 /* ViewController.h */,
@@ -90,15 +91,21 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		86B80BEA1F06430200D819F3 /* PGNumberKeyboard */ = {
+		B190FE0C982300D003A69C75 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				86B80BEB1F06430200D819F3 /* keyboardDelete.png */,
-				86B80BEC1F06430200D819F3 /* PGNumberKeyboard.h */,
-				86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */,
+				86FAA5EEF930950B9ED3D6FB /* libPods-PGNumberKeyboard.a */,
 			);
-			name = PGNumberKeyboard;
-			path = ../../PGNumberKeyboard;
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		E7AAA1AAA4707EEDF5F8D422 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				398795BA12A21D50D5049851 /* Pods-PGNumberKeyboard.debug.xcconfig */,
+				EC96BD18EAAA7A91AA31C6F7 /* Pods-PGNumberKeyboard.release.xcconfig */,
+			);
+			name = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -108,9 +115,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 86B80BD81F06429200D819F3 /* Build configuration list for PBXNativeTarget "PGNumberKeyboard" */;
 			buildPhases = (
+				440A9AE8F84AB85FBF76BB11 /* [CP] Check Pods Manifest.lock */,
 				86B80BA71F06429200D819F3 /* Sources */,
 				86B80BA81F06429200D819F3 /* Frameworks */,
 				86B80BA91F06429200D819F3 /* Resources */,
+				BC4391BE7D22D6F5E8F5CD51 /* [CP] Embed Pods Frameworks */,
+				CEB0D0CFBD3BC0334E555E46 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -161,13 +171,60 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B80BBE1F06429200D819F3 /* LaunchScreen.storyboard in Resources */,
-				86B80BF01F06430200D819F3 /* keyboardDelete.png in Resources */,
 				86B80BBB1F06429200D819F3 /* Assets.xcassets in Resources */,
 				86B80BB91F06429200D819F3 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		440A9AE8F84AB85FBF76BB11 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		BC4391BE7D22D6F5E8F5CD51 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGNumberKeyboard/Pods-PGNumberKeyboard-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		CEB0D0CFBD3BC0334E555E46 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-PGNumberKeyboard/Pods-PGNumberKeyboard-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		86B80BA71F06429200D819F3 /* Sources */ = {
@@ -177,7 +234,6 @@
 				86B80BF51F06434200D819F3 /* UIColor+Random.m in Sources */,
 				86B80BB61F06429200D819F3 /* ViewController.m in Sources */,
 				86B80BB31F06429200D819F3 /* AppDelegate.m in Sources */,
-				86B80BF11F06430200D819F3 /* PGNumberKeyboard.m in Sources */,
 				86B80BB01F06429200D819F3 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -296,6 +352,7 @@
 		};
 		86B80BD91F06429200D819F3 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 398795BA12A21D50D5049851 /* Pods-PGNumberKeyboard.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65MUSRJ8L7;
@@ -308,6 +365,7 @@
 		};
 		86B80BDA1F06429200D819F3 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = EC96BD18EAAA7A91AA31C6F7 /* Pods-PGNumberKeyboard.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				DEVELOPMENT_TEAM = 65MUSRJ8L7;

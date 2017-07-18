@@ -1,0 +1,7 @@
+platform :ios, ‘7.0’
+
+target 'PGNumberKeyboard' do
+ 
+ pod 'PGNumberKeyboard’, '~> 1.0.3’
+
+end
