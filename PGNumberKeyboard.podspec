@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name         = "PGNumberKeyboard"
-  s.version      = "1.0.2"
+  s.version      = "1.0.3"
   s.summary      = "一款非常简单漂亮灵活的自定义数字键盘."
   s.homepage     = "https://github.com/xiaozhuxiong121/PGNumberKeyboard"
   s.license      = "MIT"

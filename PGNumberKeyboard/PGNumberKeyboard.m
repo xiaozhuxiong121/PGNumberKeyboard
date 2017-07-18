@@ -4,24 +4,53 @@
 //
 //  Created by piggybear on 2017/6/29.
 //  Copyright © 2017年 piggybear. All rights reserved.
-//
+//  GitHub Address: https://github.com/xiaozhuxiong121/PGNumberKeyboard
 
 #import "PGNumberKeyboard.h"
 #define keyboardScreenWidth   [UIScreen mainScreen].bounds.size.width
 #define keyboardScreenHeight  [UIScreen mainScreen].bounds.size.height
 #define keyboardColor(r,g,b) [UIColor colorWithRed:r / 255.0f green:g / 255.0f blue:b / 255.0f alpha:1.0f]
 
+@interface PGNumberKeyboard ()
+@property (nonatomic, weak) UITextField *textField;
+@property (nonatomic, weak) UITextView *textView;
+@end
+
 @implementation PGNumberKeyboard
 
-- (instancetype)init {
+- (instancetype)initWithTextField:(UITextField *)textField {
     if (self = [super init]) {
+        self.textField = textField;
+        self.verify = true;
         self.backgroundColor = [UIColor greenColor];
         self.frame = CGRectMake(0, keyboardScreenHeight - 150, keyboardScreenHeight, 150);
         [self setupKeyBoard];
+        [textField reloadInputViews];
     }
     return self;
 }
 
+- (instancetype)initWithTextView:(UITextView *)textView {
+    if (self = [super init]) {
+        self.textView = textView;
+        self.verify = true;
+        self.backgroundColor = [UIColor greenColor];
+        self.frame = CGRectMake(0, keyboardScreenHeight - 150, keyboardScreenHeight, 150);
+        [self setupKeyBoard];
+        [textView reloadInputViews];
+    }
+    return self;
+}
+
+- (void)setup {
+    if ([_delegate respondsToSelector:@selector(editChanage:)]) {
+        if (self.textField) {
+            [_delegate editChanage:self.textField];
+        }else if(self.textView) {
+            [_delegate editChanage:self.textView];
+        }
+    }
+}
 - (void)setupKeyBoard {
     self.frame=CGRectMake(0, keyboardScreenHeight-243, keyboardScreenWidth, 243);
     int space = 1;
@@ -140,33 +169,144 @@
 
 - (void)keyBoardAction:(UIButton *)sender {
     UIButton* btn = (UIButton*)sender;
-    
     NSInteger number = btn.tag;
-    
-    if (nil == _delegate) {
-        return;
-    }
     if (number <= 9 && number >= 0) { // 0 - 9数字
-        [_delegate numberKeyBoard:number];
+        [self numberKeyBoard:number];
         return;
     }
-    
     if (10 == number) { //删除
-        [_delegate cancelKeyBoard];
+        [self cancelKeyBoard];
         return;
     }
     if (11 == number) { //点
-        [_delegate periodKeyBoard];
+        [self periodKeyBoard];
         return;
     }
     if (12 == number) { //负号
-        [_delegate minusKeyBoard];
+        [self minusKeyBoard];
         return;
     }
     
     if (13 == number) { //确定
-        [_delegate finishKeyBoard];
+        [self finishKeyBoard];
         return;
+    }
+}
+
+#pragma mark - logic
+
+- (void)numberKeyBoard:(NSInteger)number {
+    NSString *str = @"";
+    if (self.textField) {
+        str = self.textField.text;
+    }else if (self.textView) {
+        str = self.textView.text;
+    }
+    if (([str isEqualToString:@"-0"] || [str isEqualToString:@"0"]) && self.verify) {
+        str = @"";
+    }
+    if (self.textField) {
+        self.textField.text = [NSString stringWithFormat:@"%@%ld",str,(long)number];
+    }else if (self.textView) {
+        self.textView.text = [NSString stringWithFormat:@"%@%ld",str,(long)number];
+    }
+    [self setup];
+}
+
+- (void)cancelKeyBoard {
+    NSString *str = @"";
+    if (self.textField) {
+        str = self.textField.text;
+    }else if (self.textView) {
+        str = self.textView.text;
+    }
+    NSMutableString *muStr = [[NSMutableString alloc] initWithString:str];
+    if (muStr.length <= 0) {
+        return;
+    }
+    [muStr deleteCharactersInRange:NSMakeRange([muStr length] - 1, 1)];
+    if (self.textField) {
+        self.textField.text = muStr;
+    }else if (self.textView) {
+        self.textView.text = muStr;
+    }
+    [self setup];
+}
+
+-(void)periodKeyBoard{
+    if (!self.verify) {
+        if (self.textField) {
+            self.textField.text = [NSString stringWithFormat:@"%@.",self.textField.text];
+        }else if (self.textView) {
+            self.textView.text = [NSString stringWithFormat:@"%@.",self.textView.text];
+        }
+        [self setup];
+        return;
+    }
+    if (self.textField) {
+        if ([self.textField.text isEqualToString:@""] || [self.textField.text isEqualToString:@"-"]) {
+            return;
+        }
+        //判断当前时候存在一个点
+        if ([self.textField.text rangeOfString:@"."].location == NSNotFound) {
+            //输入中没有点
+            NSMutableString  *mutableString=[[NSMutableString alloc]initWithFormat:@"%@%@",self.textField.text,@"."];
+            self.textField.text = mutableString;
+            [self setup];
+        }
+    }else if (self.textView) {
+        if ([self.textView.text isEqualToString:@""] || [self.textView.text isEqualToString:@"-"]) {
+            return;
+        }
+        //判断当前时候存在一个点
+        if ([self.textView.text rangeOfString:@"."].location == NSNotFound) {
+            //输入中没有点
+            NSMutableString  *mutableString=[[NSMutableString alloc]initWithFormat:@"%@%@",self.textView.text,@"."];
+            self.textView.text = mutableString;
+            [self setup];
+        }
+    }
+}
+
+-(void)minusKeyBoard{
+    if (!self.verify) {
+        if (self.textField) {
+            self.textField.text = [NSString stringWithFormat:@"%@-",self.textField.text];
+        }else if (self.textView) {
+            self.textView.text = [NSString stringWithFormat:@"%@-",self.textView.text];
+        }
+        [self setup];
+        return;
+    }
+    if (self.textField) {
+        if (self.textField.text.length) {
+            return;
+        }
+        self.textField.text = @"-";
+    }else if (self.textView) {
+        if (self.textView.text.length) {
+            return;
+        }
+        self.textView.text = @"-";
+    }
+    [self setup];
+}
+
+-(void)finishKeyBoard {
+    if (self.textField) {
+        [self.textField resignFirstResponder];
+    }else if (self.textView) {
+        [self.textView resignFirstResponder];
+    }
+}
+
+- (void)reloadInputViews {
+    if (self.textField) {
+        self.textField.inputView = nil;
+        [self.textField reloadInputViews];
+    }else if (self.textView) {
+        self.textView.inputView = nil;
+        [self.textView reloadInputViews];
     }
 }
 

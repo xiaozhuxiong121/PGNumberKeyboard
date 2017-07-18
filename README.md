@@ -10,27 +10,49 @@ pod 'PGNumberKeyboard'
 
 # Usage
 
-```
-#import <PGNumberKeyboard/PGNumberKeyboardManager.h>
+> UITextField
 
-[PGNumberKeyboardManager new].textField = yourTextField;
 ```
+#import <PGNumberKeyboard/PGNumberKeyboard.h>
+
+self.yourTextField.inputView = [[PGNumberKeyboard alloc]initWithTextField:self.yourTextField];
+```
+> UITextView
+
+```
+self.yourTextView.inputView = [[PGNumberKeyboard alloc]initWithTextView:self.yourTextView];
+```
+
+
 # Advanced Usage
 
-```
-#import <PGNumberKeyboard/PGNumberKeyboardManager.h>
+> UITextField
 
-PGNumberKeyboardManager *manager = [[PGNumberKeyboardManager alloc]init];
-manager.delegate = self;
-manager.textField = yourTextField;
+```
+PGNumberKeyboard *keyboard = [[PGNumberKeyboard alloc]initWithTextField:self.yourTextField];
+keyboard.delegate = self;
+self.yourTextField.inputView = keyboard;
 
 #pragma mark - PGNumberKeyboardManagerDelegate
 
-- (void)editChanage:(UITextField *)textField {
-    NSLog(@"text = %@\ttag = %ld", textField.text, textField.tag);
+- (void)editChanage:(id)sender {
 }
 
 ```
+> UITextView
+
+```
+PGNumberKeyboard *keyboard = [[PGNumberKeyboard alloc] initWithTextView:self.yourTextView];
+keyboard.delegate = self;
+self.yourTextView.inputView = keyboard;
+
+#pragma mark - PGNumberKeyboardManagerDelegate
+
+- (void)editChanage:(id)sender {
+}
+
+```
+
 # Overview
 [http://www.jianshu.com/p/d6455564675e
 ](http://www.jianshu.com/p/d6455564675e)

@@ -15,7 +15,6 @@
 		86B80BBE1F06429200D819F3 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BBC1F06429200D819F3 /* LaunchScreen.storyboard */; };
 		86B80BF01F06430200D819F3 /* keyboardDelete.png in Resources */ = {isa = PBXBuildFile; fileRef = 86B80BEB1F06430200D819F3 /* keyboardDelete.png */; };
 		86B80BF11F06430200D819F3 /* PGNumberKeyboard.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */; };
-		86B80BF21F06430200D819F3 /* PGNumberKeyboardManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BEF1F06430200D819F3 /* PGNumberKeyboardManager.m */; };
 		86B80BF51F06434200D819F3 /* UIColor+Random.m in Sources */ = {isa = PBXBuildFile; fileRef = 86B80BF41F06434200D819F3 /* UIColor+Random.m */; };
 /* End PBXBuildFile section */
 
@@ -33,8 +32,6 @@
 		86B80BEB1F06430200D819F3 /* keyboardDelete.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = keyboardDelete.png; sourceTree = "<group>"; };
 		86B80BEC1F06430200D819F3 /* PGNumberKeyboard.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGNumberKeyboard.h; sourceTree = "<group>"; };
 		86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGNumberKeyboard.m; sourceTree = "<group>"; };
-		86B80BEE1F06430200D819F3 /* PGNumberKeyboardManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = PGNumberKeyboardManager.h; sourceTree = "<group>"; };
-		86B80BEF1F06430200D819F3 /* PGNumberKeyboardManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = PGNumberKeyboardManager.m; sourceTree = "<group>"; };
 		86B80BF31F06434200D819F3 /* UIColor+Random.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+Random.h"; sourceTree = "<group>"; };
 		86B80BF41F06434200D819F3 /* UIColor+Random.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIColor+Random.m"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -99,8 +96,6 @@
 				86B80BEB1F06430200D819F3 /* keyboardDelete.png */,
 				86B80BEC1F06430200D819F3 /* PGNumberKeyboard.h */,
 				86B80BED1F06430200D819F3 /* PGNumberKeyboard.m */,
-				86B80BEE1F06430200D819F3 /* PGNumberKeyboardManager.h */,
-				86B80BEF1F06430200D819F3 /* PGNumberKeyboardManager.m */,
 			);
 			name = PGNumberKeyboard;
 			path = ../../PGNumberKeyboard;
@@ -180,7 +175,6 @@
 			buildActionMask = 2147483647;
 			files = (
 				86B80BF51F06434200D819F3 /* UIColor+Random.m in Sources */,
-				86B80BF21F06430200D819F3 /* PGNumberKeyboardManager.m in Sources */,
 				86B80BB61F06429200D819F3 /* ViewController.m in Sources */,
 				86B80BB31F06429200D819F3 /* AppDelegate.m in Sources */,
 				86B80BF11F06430200D819F3 /* PGNumberKeyboard.m in Sources */,
