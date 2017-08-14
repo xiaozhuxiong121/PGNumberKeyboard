@@ -11,6 +11,7 @@ Pod::Spec.new do |s|
   s.resource     = 'PGNumberKeyboard/keyboardDelete.png'
   s.frameworks   = "UIKit"
   s.requires_arc = true
-
 end
+
+
  
