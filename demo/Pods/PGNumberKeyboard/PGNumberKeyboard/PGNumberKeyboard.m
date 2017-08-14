@@ -196,44 +196,125 @@
 #pragma mark - logic
 
 - (void)numberKeyBoard:(NSInteger)number {
+    UITextPosition* beginning = self.textField.beginningOfDocument;
+    UITextRange* selectedRange = self.textField.selectedTextRange;
+    UITextPosition* selectionStart = selectedRange.start;
+    UITextPosition* selectionEnd = selectedRange.end;
+    NSInteger location = [self.textField offsetFromPosition:beginning toPosition:selectionStart];
+    NSInteger length = [self.textField offsetFromPosition:selectionStart toPosition:selectionEnd];
+    NSString *string = [self.textField.text substringToIndex:location];
+    
     NSString *str = @"";
     if (self.textField) {
         str = self.textField.text;
+        if (self.verify) {
+            if (([string isEqualToString:@"-0"] || [string isEqualToString:@"0"])) {
+                return;
+            }
+        }
     }else if (self.textView) {
+        if (self.verify) {
+            if (([string isEqualToString:@"-0"] || [string isEqualToString:@"0"])) {
+                return;
+            }
+        }
         str = self.textView.text;
+        beginning = self.textView.beginningOfDocument;
+        selectedRange = self.textView.selectedTextRange;
+        selectionStart = selectedRange.start;
+        selectionEnd = selectedRange.end;
+        location = [self.textView offsetFromPosition:beginning toPosition:selectionStart];
+        length = [self.textView offsetFromPosition:selectionStart toPosition:selectionEnd];
     }
-    if (([str isEqualToString:@"-0"] || [str isEqualToString:@"0"]) && self.verify) {
-        str = @"";
+    
+    NSMutableString *mutableString = [[NSMutableString alloc]initWithString:str];
+    NSString *numberStr = [@(number) stringValue];
+    [mutableString replaceCharactersInRange:NSMakeRange(location, length) withString:numberStr];
+    UITextPosition *end = [self.textField positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:numberStr.length];
+    if (self.textView) {
+        end = [self.textView positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:numberStr.length];
     }
     if (self.textField) {
-        self.textField.text = [NSString stringWithFormat:@"%@%ld",str,(long)number];
+        self.textField.text = mutableString;
+        if (location != str.length) {
+            self.textField.selectedTextRange = [self.textField textRangeFromPosition:end toPosition:end];
+        }
     }else if (self.textView) {
-        self.textView.text = [NSString stringWithFormat:@"%@%ld",str,(long)number];
+        NSString *string = [self.textView.text substringToIndex:location];
+        if (([string isEqualToString:@"-0"] || [string isEqualToString:@"0"]) && self.verify) {
+            return;
+        }
+        self.textView.text = mutableString;
+        if (location != str.length) {
+            self.textView.selectedTextRange = [self.textView textRangeFromPosition:end toPosition:end];
+        }
     }
     [self setup];
 }
 
 - (void)cancelKeyBoard {
+    UITextPosition* beginning = self.textField.beginningOfDocument;
+    UITextRange* selectedRange = self.textField.selectedTextRange;
+    UITextPosition* selectionStart = selectedRange.start;
+    UITextPosition* selectionEnd = selectedRange.end;
+    NSInteger location = [self.textField offsetFromPosition:beginning toPosition:selectionStart];
+    NSInteger length = [self.textField offsetFromPosition:selectionStart toPosition:selectionEnd];
+    
     NSString *str = @"";
     if (self.textField) {
         str = self.textField.text;
+        if (location == 0 && length == 0) {
+            return;
+        }
     }else if (self.textView) {
         str = self.textView.text;
+        beginning = self.textView.beginningOfDocument;
+        selectedRange = self.textView.selectedTextRange;
+        selectionStart = selectedRange.start;
+        selectionEnd = selectedRange.end;
+        location = [self.textView offsetFromPosition:beginning toPosition:selectionStart];
+        length = [self.textView offsetFromPosition:selectionStart toPosition:selectionEnd];
+        if (location == 0 && length == 0) {
+            return;
+        }
     }
     NSMutableString *muStr = [[NSMutableString alloc] initWithString:str];
     if (muStr.length <= 0) {
         return;
     }
-    [muStr deleteCharactersInRange:NSMakeRange([muStr length] - 1, 1)];
+    CGFloat offset = 0;
+    if (length == 0) {
+        offset = 1;
+        [muStr deleteCharactersInRange:NSMakeRange(location - 1, 1)];
+    }else {
+        [muStr deleteCharactersInRange:NSMakeRange(location, length)];
+    }
+    UITextPosition *end = [self.textField positionFromPosition:selectionStart inDirection:UITextLayoutDirectionLeft offset:offset];
+    if (self.textView) {
+        end = [self.textView positionFromPosition:selectionStart inDirection:UITextLayoutDirectionLeft offset:offset];
+    }
     if (self.textField) {
         self.textField.text = muStr;
+        if (location != str.length) {
+            self.textField.selectedTextRange = [self.textField textRangeFromPosition:end toPosition:end];
+        }
     }else if (self.textView) {
         self.textView.text = muStr;
+        if (location != str.length) {
+            self.textView.selectedTextRange = [self.textView textRangeFromPosition:end toPosition:end];
+        }
     }
     [self setup];
 }
 
 -(void)periodKeyBoard{
+    UITextPosition* beginning = self.textField.beginningOfDocument;
+    UITextRange* selectedRange = self.textField.selectedTextRange;
+    UITextPosition* selectionStart = selectedRange.start;
+    UITextPosition* selectionEnd = selectedRange.end;
+    NSInteger location = [self.textField offsetFromPosition:beginning toPosition:selectionStart];
+    NSInteger length = [self.textField offsetFromPosition:selectionStart toPosition:selectionEnd];
+    NSString *str = [self.textField.text substringToIndex:location];
     if (!self.verify) {
         if (self.textField) {
             self.textField.text = [NSString stringWithFormat:@"%@.",self.textField.text];
@@ -244,31 +325,69 @@
         return;
     }
     if (self.textField) {
-        if ([self.textField.text isEqualToString:@""] || [self.textField.text isEqualToString:@"-"]) {
+        if ([str isEqualToString:@""] || [str isEqualToString:@"-"]) {
             return;
         }
         //判断当前时候存在一个点
         if ([self.textField.text rangeOfString:@"."].location == NSNotFound) {
             //输入中没有点
-            NSMutableString  *mutableString=[[NSMutableString alloc]initWithFormat:@"%@%@",self.textField.text,@"."];
+            NSMutableString *mutableString = [[NSMutableString alloc]initWithString:self.textField.text];
+            [mutableString replaceCharactersInRange:NSMakeRange(location, length) withString:@"."];
             self.textField.text = mutableString;
+            
+            UITextPosition *end = [self.textField positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:1];
+            if (location != self.textField.text.length) {
+                self.textField.selectedTextRange = [self.textField textRangeFromPosition:end toPosition:end];
+            }
             [self setup];
         }
     }else if (self.textView) {
-        if ([self.textView.text isEqualToString:@""] || [self.textView.text isEqualToString:@"-"]) {
+        beginning = self.textView.beginningOfDocument;
+        selectedRange = self.textView.selectedTextRange;
+        selectionStart = selectedRange.start;
+        selectionEnd = selectedRange.end;
+        location = [self.textView offsetFromPosition:beginning toPosition:selectionStart];
+        length = [self.textView offsetFromPosition:selectionStart toPosition:selectionEnd];
+        str = [self.textView.text substringToIndex:location];
+        if ([str isEqualToString:@""] || [str isEqualToString:@"-"]) {
             return;
         }
         //判断当前时候存在一个点
         if ([self.textView.text rangeOfString:@"."].location == NSNotFound) {
             //输入中没有点
-            NSMutableString  *mutableString=[[NSMutableString alloc]initWithFormat:@"%@%@",self.textView.text,@"."];
+            NSMutableString *mutableString = [[NSMutableString alloc]initWithString:self.textView.text];
+            [mutableString replaceCharactersInRange:NSMakeRange(location, length) withString:@"."];
             self.textView.text = mutableString;
+            
+            UITextPosition *end = [self.textView positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:1];
+            if (location != self.textView.text.length) {
+                self.textView.selectedTextRange = [self.textView textRangeFromPosition:end toPosition:end];
+            }
             [self setup];
         }
     }
 }
 
 -(void)minusKeyBoard{
+    UITextPosition* beginning = self.textField.beginningOfDocument;
+    UITextRange* selectedRange = self.textField.selectedTextRange;
+    UITextPosition* selectionStart = selectedRange.start;
+    UITextPosition* selectionEnd = selectedRange.end;
+    NSInteger location = [self.textField offsetFromPosition:beginning toPosition:selectionStart];
+    NSInteger length = [self.textField offsetFromPosition:selectionStart toPosition:selectionEnd];
+    NSString *str = [self.textField.text substringToIndex:location];
+    UITextPosition *end = [self.textField positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:1];
+    if (self.textView) {
+        beginning = self.textView.beginningOfDocument;
+        selectedRange = self.textView.selectedTextRange;
+        selectionStart = selectedRange.start;
+        selectionEnd = selectedRange.end;
+        location = [self.textView offsetFromPosition:beginning toPosition:selectionStart];
+        length = [self.textView offsetFromPosition:selectionStart toPosition:selectionEnd];
+        str = [self.textView.text substringToIndex:location];
+        end = [self.textView positionFromPosition:selectionStart inDirection:UITextLayoutDirectionRight offset:1];
+    }
+    
     if (!self.verify) {
         if (self.textField) {
             self.textField.text = [NSString stringWithFormat:@"%@-",self.textField.text];
@@ -278,16 +397,37 @@
         [self setup];
         return;
     }
+    if (str.length) {
+        return;
+    }
     if (self.textField) {
-        if (self.textField.text.length) {
+        if ([self.textField.text rangeOfString:@"-"].location != NSNotFound) {
             return;
         }
-        self.textField.text = @"-";
+        if (location == 0 && length == 0 && self.textField.text.length == 0) {
+            self.textField.text = @"-";
+        }else {
+            NSMutableString *mutableString = [[NSMutableString alloc]initWithString:self.textField.text];
+            [mutableString replaceCharactersInRange:NSMakeRange(location, length) withString:@"-"];
+            self.textField.text = mutableString;
+            if (location != self.textField.text.length) {
+                self.textField.selectedTextRange = [self.textField textRangeFromPosition:end toPosition:end];
+            }
+        }
     }else if (self.textView) {
-        if (self.textView.text.length) {
+        if ([self.textView.text rangeOfString:@"-"].location != NSNotFound) {
             return;
         }
-        self.textView.text = @"-";
+        if (location == 0 && length == 0 && self.textView.text.length == 0) {
+            self.textView.text = @"-";
+        }else {
+            NSMutableString *mutableString = [[NSMutableString alloc]initWithString:self.textView.text];
+            [mutableString replaceCharactersInRange:NSMakeRange(location, length) withString:@"-"];
+            self.textView.text = mutableString;
+            if (location != self.textView.text.length) {
+                self.textView.selectedTextRange = [self.textView textRangeFromPosition:end toPosition:end];
+            }
+        }
     }
     [self setup];
 }
