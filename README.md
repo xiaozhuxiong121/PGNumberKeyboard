@@ -5,7 +5,7 @@
 
 # Installation with CocoaPods
 ```
-pod 'PGNumberKeyboard', '~> 1.0.3'
+pod 'PGNumberKeyboard', '~> 1.0.4'
 ```
 
 # Usage
